@@ -1,0 +1,123 @@
+.nk-fullpage-portfolio {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: #fff;
+    background-color: $color_black_3;
+
+    .nk-fullpage-item {
+        display: none;
+    }
+
+    .nk-fullpage-bg-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-size: cover;
+        background-position: 50% 50%;
+        z-index: 0;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: #000;
+            opacity: 0.5;
+        }
+    }
+
+
+    a {
+        color: inherit;
+        text-decoration: none;
+        transition: .3s opacity;
+
+        &:hover {
+            color: inherit;
+            opacity: 0.6;
+        }
+    }
+
+    .nk-fullpage-nav > li,
+    .nk-fullpage-item-category a {
+        font-family: $font_additional;
+        font-size: 0.8rem;
+        letter-spacing: 0.07em;
+        opacity: 0.5;
+        transition: .3s opacity;
+
+        &:hover,
+        &.active {
+            color: inherit;
+            opacity: 1;
+        }
+    }
+
+    .nk-fullpage-view-button {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        width: 100%;
+    }
+    .nk-fullpage-content {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .nk-fullpage-item-category {
+        font-size: 0.848rem;
+        line-height: 1;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 10px;
+    }
+    .nk-fullpage-title a {
+        color: #fff;
+    }
+}
+
+// right nav
+.nk-fullpage-nav {
+    position: fixed;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%) translateX(100%);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s visibility, .3s opacity, .3s transform;
+    z-index: 2;
+
+    &.active {
+        transform: translateY(-50%) translateX(0);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    > li {
+        position: relative;
+        cursor: pointer;
+        width: 20px;
+        text-transform: uppercase;
+        padding: 15px 0;
+        color: inherit;
+        text-decoration: none;
+    }
+}

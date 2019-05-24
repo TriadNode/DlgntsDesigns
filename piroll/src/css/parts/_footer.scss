@@ -1,0 +1,19 @@
+.nk-footer {
+    position: relative;
+    background-color: $color_bg_footer;
+    color: $color_text_footer;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    z-index: 1;
+
+    // titles
+    h1, h2, h3, h4, h5, h6 {
+        color: $color_titles_footer;
+    }
+
+    // links
+    a {
+        color: inherit;
+    }
+}
+
